@@ -16,7 +16,7 @@ This review was initially based on commit hash `84aed90c86481f75c50911a139e5ef38
 
 Overall, the code follows high-quality software development standards and best practices.
 
-During the review, 0 Critical, 1 Major, 4 Minor, and 5 Informational issues were found.
+During the review, 0 Critical, 1 Major, 3 Minor, and 6 Informational issues were found.
 
 - A critical issue represents something that can be relatively easily exploited and will likely lead to loss of funds.
 - A major issue represents something that can result in an unintended behavior of the smart contracts. These issues can also lead to loss of funds but are typically harder to execute than critical issues.
@@ -67,16 +67,6 @@ The constructor of `Owned.sol` is missing the zero address check. The check shou
 
 This issue has been fixed.
 
-#### 2.4 IPool should be renamed to something else
-
-##### Description
-
-It's common practice to name interfaces as I**** in Solidity. Naming logic contracts like this adds to confusion. It's recommended to rename `IPool` to something else.
-
-##### Status update
-
-This issue has been fixed.
-
 ### Informational
 
 #### 3.1 Division before multiplication
@@ -116,6 +106,12 @@ In L272 of `Bpool`, `Record memory record = records[i];` is defined but it's not
 ##### Description
 
 There are a few single and batch functions like `addToken` / `addTokens` that have plenty of duplicated code among them. It's recommended to factor out the common code in an internal/base function.
+
+#### 3.6 IPool should be renamed to something else
+
+##### Description
+
+It's common practice to name interfaces as I**** in Solidity. Naming logic contracts like this adds to confusion. It's recommended to rename `IPool` to something else.
 
 **NOTE**: Most of the suggestions from the informational issues have been implemented already.
 
