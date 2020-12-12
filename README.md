@@ -1,4 +1,4 @@
-# Index Finance smart contracts security review by Mudit Gupta
+# Indexed Finance smart contracts security review by Mudit Gupta
 
 ## Objective of the review
 
